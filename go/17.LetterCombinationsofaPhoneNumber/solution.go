@@ -14,13 +14,14 @@ func letterCombinations(digits string) []string {
 	m['9'] = []string{"w", "x", "y", "z"}
 	i := 0
 	for j, _ := range digits {
+		i = j+1;
 		if val, ok := m[digits[i]]; !ok {
 			continue
 		}
-		if val, ok := m[digits[j]]; !ok {
+		if val2, ok := m[digits[j]]; !ok {
 			continue
 		}
-
+		
 	}
 
 }

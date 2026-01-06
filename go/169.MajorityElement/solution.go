@@ -2,14 +2,15 @@ package majorityelement
 
 func majorityElement(nums []int) int {
 	freq := make(map[int]int)
-	max := -999
+	max := len(nums) / 2
 	maxKey := 0
 
 	for _, num := range nums {
-		if _, exists := freq[num]; exists {
-			freq[num]++
-		} else {
+		if _, exists := freq[num]; !exists {
+
 			freq[num] = 1
+		} else {
+			freq[num]++
 		}
 
 	}
